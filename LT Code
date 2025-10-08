@@ -1,0 +1,197 @@
+#include <iostream>
+#include <unordered_map>
+#include <string>
+#include <locale>
+#include <limits>
+
+// Language Codes Enum for clarity
+enum Language {
+    AS = 1, BN, BO, DO, GU, HI, KN, KS, KO,
+    MAI, ML, MN, MR, NE, OD, PA, SA, SAN,
+    SD, TA, TE, UR
+};
+
+// Sample minimal dictionaries for each language (English to target language)
+std::unordered_map<std::string, std::string> en_as = {
+    {"hello", "নমস্কাৰ"}, {"thank you", "ধন্যবাদ"},
+    {"yes", "হয়"}, {"no", "নহয়"}, {"goodbye", "বিদায়"}
+};
+
+std::unordered_map<std::string, std::string> en_bn = {
+    {"hello", "হ্যালো"}, {"thank you", "ধন্যবাদ"},
+    {"yes", "হ্যাঁ"}, {"no", "না"}, {"goodbye", "বিদায়"}
+};
+
+std::unordered_map<std::string, std::string> en_bo = {
+    {"hello", "नमस्कार"}, {"thank you", "धन्यवाद"},
+    {"yes", "होय"}, {"no", "नहीं"}, {"goodbye", "जाओ"}
+};
+
+std::unordered_map<std::string, std::string> en_do = {
+    {"hello", "नमस्ते"}, {"thank you", "धन्यवाद"},
+    {"yes", "हाँ"}, {"no", "ना"}, {"goodbye", "अलविदा"}
+};
+
+std::unordered_map<std::string, std::string> en_gu = {
+    {"hello", "હેલો"}, {"thank you", "આભાર"},
+    {"yes", "હા"}, {"no", "નહીં"}, {"goodbye", "આવજો"}
+};
+
+std::unordered_map<std::string, std::string> en_hi = {
+    {"hello", "नमस्ते"}, {"thank you", "धन्यवाद"},
+    {"yes", "हाँ"}, {"no", "नहीं"}, {"goodbye", "अलविदा"}
+};
+
+std::unordered_map<std::string, std::string> en_kn = {
+    {"hello", "ಹಲೋ"}, {"thank you", "ಧನ್ಯವಾದಗಳು"},
+    {"yes", "ಹೌದು"}, {"no", "ಇಲ್ಲ"}, {"goodbye", "ವಿದಾಯ"}
+};
+
+std::unordered_map<std::string, std::string> en_ks = {
+    {"hello", "السلام علیکم"}, {"thank you", "شکریہ"},
+    {"yes", "ہاں"}, {"no", "نہیں"}, {"goodbye", "خدا حافظ"}
+};
+
+std::unordered_map<std::string, std::string> en_ko = {
+    {"hello", "नमस्कार"}, {"thank you", "धन्यवाद"},
+    {"yes", "हो"}, {"no", "नाय"}, {"goodbye", "आवणें"}
+};
+
+std::unordered_map<std::string, std::string> en_mai = {
+    {"hello", "नमस्कार"}, {"thank you", "धन्यवाद"},
+    {"yes", "हाँ"}, {"no", "ना"}, {"goodbye", "बिदा"}
+};
+
+std::unordered_map<std::string, std::string> en_ml = {
+    {"hello", "ഹലോ"}, {"thank you", "നന്ദി"},
+    {"yes", "അതെ"}, {"no", "ഇല്ല"}, {"goodbye", "വിട"}
+};
+
+std::unordered_map<std::string, std::string> en_mn = {
+    {"hello", "नमस्कार"}, {"thank you", "धन्यवाद"},
+    {"yes", "हाँ"}, {"no", "ना"}, {"goodbye", "अलगर"}
+};
+
+std::unordered_map<std::string, std::string> en_mr = {
+    {"hello", "नमस्कार"}, {"thank you", "धन्यवाद"},
+    {"yes", "होय"}, {"no", "नाही"}, {"goodbye", "निरोप"}
+};
+
+std::unordered_map<std::string, std::string> en_ne = {
+    {"hello", "नमस्ते"}, {"thank you", "धन्यवाद"},
+    {"yes", "हो"}, {"no", "होइन"}, {"goodbye", "विदा"}
+};
+
+std::unordered_map<std::string, std::string> en_od = {
+    {"hello", "ନମସ୍କାର"}, {"thank you", "ଧନ୍ୟବାଦ"},
+    {"yes", "ହଁ"}, {"no", "ନାହିଁ"}, {"goodbye", "ବିଦାୟ"}
+};
+
+std::unordered_map<std::string, std::string> en_pa = {
+    {"hello", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ"}, {"thank you", "ਧੰਨਵਾਦ"},
+    {"yes", "ਹਾਂ"}, {"no", "ਨਹੀਂ"}, {"goodbye", "ਅਲਵਿਦਾ"}
+};
+
+std::unordered_map<std::string, std::string> en_sa = {
+    {"hello", "नमस्ते"}, {"thank you", "धन्यवादः"},
+    {"yes", "आम्"}, {"no", "न"}, {"goodbye", "यात्रा शुभा"}
+};
+
+std::unordered_map<std::string, std::string> en_san = en_sa; 
+
+std::unordered_map<std::string, std::string> en_sd = {
+    {"hello", "سلام"}, {"thank you", "مهرباني"},
+    {"yes", "ها"}, {"no", "نه"}, {"goodbye", "خدا حافظ"}
+};
+
+std::unordered_map<std::string, std::string> en_ta = {
+    {"hello", "வணக்கம்"}, {"thank you", "நன்றி"},
+    {"yes", "ஆம்"}, {"no", "இல்லை"}, {"goodbye", "பிரியா"}
+};
+
+std::unordered_map<std::string, std::string> en_te = {
+    {"hello", "హలో"}, {"thank you", "ధన్యవాదాలు"},
+    {"yes", "అవును"}, {"no", "కాదు"}, {"goodbye", "వీడ్కోలు"}
+};
+
+std::unordered_map<std::string, std::string> en_ur = {
+    {"hello", "السلام علیکم"}, {"thank you", "شکریہ"},
+    {"yes", "ہاں"}, {"no", "نہیں"}, {"goodbye", "خدا حافظ"}
+};
+
+// Function to return dictionary pointer based on selected language code
+const std::unordered_map<std::string, std::string>* getDictionary(int langCode) {
+    switch (langCode) {
+        case AS: return &en_as;
+        case BN: return &en_bn;
+        case BO: return &en_bo;
+        case DO: return &en_do;
+        case GU: return &en_gu;
+        case HI: return &en_hi;
+        case KN: return &en_kn;
+        case KS: return &en_ks;
+        case KO: return &en_ko;
+        case MAI: return &en_mai;
+        case ML: return &en_ml;
+        case MN: return &en_mn;
+        case MR: return &en_mr;
+        case NE: return &en_ne;
+        case OD: return &en_od;
+        case PA: return &en_pa;
+        case SA: return &en_sa;
+        case SAN: return &en_san;
+        case SD: return &en_sd;
+        case TA: return &en_ta;
+        case TE: return &en_te;
+        case UR: return &en_ur;
+        default: return nullptr;
+    }
+}
+
+int main() {
+    // Set locale for UTF-8 support on consoles that support it
+    std::locale::global(std::locale(""));
+
+    std::cout << "Offline Indian Language Translator Prototype\n\n";
+    std::cout << "Select target language by entering the number:\n"
+              << "1 - Assamese\n2 - Bengali\n3 - Bodo\n4 - Dogri\n5 - Gujarati\n"
+              << "6 - Hindi\n7 - Kannada\n8 - Kashmiri\n9 - Konkani\n10 - Maithili\n"
+              << "11 - Malayalam\n12 - Manipuri\n13 - Marathi\n14 - Nepali\n15 - Odia\n"
+              << "16 - Punjabi\n17 - Sanskrit\n18 - Sanskrit(Duplicate)\n19 - Sindhi\n"
+              << "20 - Tamil\n21 - Telugu\n22 - Urdu\n";
+
+    int langChoice = 0;
+    while (true) {
+        std::cout << "\nEnter language code (1-22): ";
+        std::cin >> langChoice;
+
+        if (std::cin.fail() || langChoice < 1 || langChoice > 22) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input. Please enter a valid number between 1 and 22.\n";
+        } else {
+            break;
+        }
+    }
+
+    const std::unordered_map<std::string, std::string>* dictionary = getDictionary(langChoice);
+    if (!dictionary) {
+        std::cout << "Error: Language dictionary not found.\n";
+        return 1;
+    }
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear input buffer
+
+    std::cout << "Enter English word to translate (hello, thank you, yes, no, goodbye): ";
+    std::string inputWord;
+    std::getline(std::cin, inputWord);
+
+    auto it = dictionary->find(inputWord);
+    if (it != dictionary->end()) {
+        std::cout << "Translation: " << it->second << "\n";
+    } else {
+        std::cout << "Translation not found for \"" << inputWord << "\" in selected language.\n";
+    }
+
+    return 0;
+}
